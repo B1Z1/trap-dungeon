@@ -1,15 +1,13 @@
-package game;
+package game.core;
 
-import util.size.Size;
+import game.listeners.GameKeyListener;
+import game.listeners.GameMouseListener;
+import game.state.GameStateManager;
 
-import java.awt.Dimension;
 import java.awt.Graphics;
 
 public class Game implements Runnable {
-    public final static int TILES_IN_WIDTH = 26;
-    public final static int TILES_IN_HEIGHT = 14;
-    private final static int PANEL_WIDTH = TILES_IN_WIDTH * Size.TILES_SIZE;
-    private final static int PANEL_HEIGHT = TILES_IN_HEIGHT * Size.TILES_SIZE;
+
 
     private final static int FPS_SET = 120;
     private final static int UPS_SET = 200;
@@ -18,9 +16,24 @@ public class Game implements Runnable {
     private final GamePanel gamePanel;
     private final GameWindow gameWindow;
 
+    private final GameStateManager gameStateManager;
+
+    private final GameKeyListener gameKeyListener;
+    private final GameMouseListener gameMouseListener;
+
     public Game() {
-        gamePanel = new GamePanel(this::render, new Dimension(PANEL_WIDTH, PANEL_HEIGHT));
+        gameStateManager = new GameStateManager();
+
+        gamePanel = new GamePanel();
         gameWindow = new GameWindow(gamePanel);
+
+        gameKeyListener = new GameKeyListener(gameStateManager);
+        gameMouseListener = new GameMouseListener(gameStateManager);
+
+        gamePanel.addRenderListener(this::render);
+        gamePanel.addKeyListener(gameKeyListener);
+        gamePanel.addMouseListener(gameMouseListener);
+        gamePanel.requestFocus();
     }
 
     @Override
@@ -69,10 +82,10 @@ public class Game implements Runnable {
     }
 
     private void update() {
-
+        gameStateManager.getCurrentState().update();
     }
 
     private void render(Graphics graphics) {
-
+        gameStateManager.getCurrentState().render(graphics);
     }
 }

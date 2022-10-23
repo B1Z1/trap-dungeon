@@ -1,15 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f75eb59c-27be-4ef1-ba16-09735ac7c266" name="Changes" comment="Initialize project">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/game/Game.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/game/GamePanel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/game/GameRepaint.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/game/GameWindow.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/util/size/Size.java" afterDir="false" />
+    <list default="true" id="f75eb59c-27be-4ef1-ba16-09735ac7c266" name="Changes" comment="Create Game window with fps/ups measure">
+      <change afterPath="$PROJECT_DIR$/src/game/listeners/GameKeyListener.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/game/listeners/GameMouseListener.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/game/state/GameMenuState.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/game/state/GamePlayingState.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/game/state/GameStateManager.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/game/state/GameStateType.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/util/listener/RenderListener.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/util/listener/UpdateListener.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/util/state/State.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/game/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/game/core/Game.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/game/GamePanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/game/core/GamePanel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/game/GameRender.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/game/core/GameRender.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/game/GameWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/game/core/GameWindow.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/util/size/Size.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/util/size/Size.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -19,8 +27,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="Interface" />
+        <option value="TypeScript File" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -47,7 +56,8 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false"
+    "WebServerToolWindowFactoryState": "false",
+    "ts.external.directory.path": "D:\\jetbrains\\apps\\IDEA-U\\ch-0\\222.4345.14\\plugins\\JavaScriptLanguage\\jsLanguageServicesImpl\\external"
   }
 }]]></component>
   <component name="RecentsManager">
@@ -77,7 +87,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1666522396215</updated>
-      <workItem from="1666522397513" duration="3881000" />
+      <workItem from="1666522397513" duration="8275000" />
     </task>
     <task id="LOCAL-00001" summary="Initialize project">
       <created>1666522546017</created>
@@ -86,7 +96,14 @@
       <option name="project" value="LOCAL" />
       <updated>1666522546017</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Create Game window with fps/ups measure">
+      <created>1666526362825</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1666526362825</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -105,6 +122,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Initialize project" />
-    <option name="LAST_COMMIT_MESSAGE" value="Initialize project" />
+    <MESSAGE value="Create Game window with fps/ups measure" />
+    <option name="LAST_COMMIT_MESSAGE" value="Create Game window with fps/ups measure" />
   </component>
 </project>
