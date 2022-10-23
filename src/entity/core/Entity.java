@@ -56,14 +56,6 @@ public abstract class Entity<T> implements RenderListener, UpdateListener {
         }
     }
 
-    public void updateHorizontalPosition(float x) {
-        this.x = x;
-
-        if (isHitBoxDefined()) {
-            hitBox.x = x;
-        }
-    }
-
     public T getCurrentAnimationType() {
         return currentAnimationType;
     }
@@ -87,6 +79,26 @@ public abstract class Entity<T> implements RenderListener, UpdateListener {
 
     public float getX() {
         return x;
+    }
+
+    public void updateHorizontalPosition(float x) {
+        this.x = x;
+
+        if (isHitBoxDefined()) {
+            hitBox.x = x;
+        }
+    }
+
+    public float getY() {
+        return y;
+    }
+
+    public void updateVerticalPosition(float y) {
+        this.y = y;
+
+        if (isHitBoxDefined()) {
+            hitBox.y = y;
+        }
     }
 
     public int getWidth() {

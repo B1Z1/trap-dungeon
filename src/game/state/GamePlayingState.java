@@ -46,6 +46,7 @@ public class GamePlayingState extends State {
         switch (e.getKeyCode()) {
             case KeyEvent.VK_D -> player.setDirection(Direction.RIGHT, true);
             case KeyEvent.VK_A -> player.setDirection(Direction.LEFT, true);
+            case KeyEvent.VK_W -> player.setJump(true);
         }
     }
 
@@ -54,6 +55,7 @@ public class GamePlayingState extends State {
         switch (e.getKeyCode()) {
             case KeyEvent.VK_D -> player.setDirection(Direction.RIGHT, false);
             case KeyEvent.VK_A -> player.setDirection(Direction.LEFT, false);
+            case KeyEvent.VK_W -> player.setJump(false);
         }
     }
 
@@ -103,16 +105,19 @@ public class GamePlayingState extends State {
     }
 
     private void initClasses() {
-        initPlayer();
         initLevelManager();
+        initPlayer();
     }
 
     private void initPlayer() {
         BufferedImage idleAnimation = LoaderImage.loadImage("player/Dude_Monster_Idle_4.png");
         BufferedImage runAnimation = LoaderImage.loadImage("player/Dude_Monster_Run_6.png");
+        BufferedImage jumpAnimation = LoaderImage.loadImage("player/Dude_Monster_Jump_8.png");
         HashMap<PlayerAnimationType, BufferedImage[]> animationTypeBufferedImageHashMap = new HashMap<>() {{
-            put(PlayerAnimationType.IDLE, SpriteAnimation.cutSprite(idleAnimation, Size.TILES_DEFAULT_SIZE, 4));
-            put(PlayerAnimationType.RUN, SpriteAnimation.cutSprite(runAnimation, Size.TILES_DEFAULT_SIZE, 6));
+            put(PlayerAnimationType.IDLE, SpriteAnimation.cutSprite(idleAnimation, Size.TILES_DEFAULT_SIZE, 4, 4));
+            put(PlayerAnimationType.RUN, SpriteAnimation.cutSprite(runAnimation, Size.TILES_DEFAULT_SIZE, 6, 6));
+            put(PlayerAnimationType.JUMP, SpriteAnimation.cutSprite(jumpAnimation, Size.TILES_DEFAULT_SIZE, 5, 5));
+            put(PlayerAnimationType.FALL, SpriteAnimation.cutSprite(jumpAnimation, Size.TILES_DEFAULT_SIZE, 1, 6, 5));
         }};
 
         player = new Player(
@@ -120,7 +125,8 @@ public class GamePlayingState extends State {
                 200,
                 (int) (32 * Size.TILES_DEFAULT_SCALE),
                 (int) (32 * Size.TILES_DEFAULT_SCALE),
-                animationTypeBufferedImageHashMap
+                animationTypeBufferedImageHashMap,
+                levelManager
         );
     }
 

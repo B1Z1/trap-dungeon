@@ -3,11 +3,29 @@ package util.sprite;
 import java.awt.image.BufferedImage;
 
 public class SpriteAnimation {
-    public static BufferedImage[] cutSprite(BufferedImage sprite, int spriteSize, int spritesCount) {
-        BufferedImage[] sprites = new BufferedImage[spritesCount];
+    public static BufferedImage[] cutSprite(
+            BufferedImage sprite,
+            int spriteSize,
+            int spriteCount,
+            int lastSpriteIndex
+    ) {
+        return cutSprite(sprite, spriteSize, spriteCount, lastSpriteIndex, 0);
+    }
 
-        for (int i = 0; i < spritesCount; i++) {
-            sprites[i] = sprite.getSubimage(i * spriteSize, 0, spriteSize, spriteSize);
+    public static BufferedImage[] cutSprite(
+            BufferedImage sprite,
+            int spriteSize,
+            int spriteCount,
+            int lastSpriteIndex,
+            int fromSprite
+    ) {
+        BufferedImage[] sprites = new BufferedImage[spriteCount];
+        int index = 0;
+
+        for (int i = fromSprite; i < lastSpriteIndex; i++) {
+            sprites[index] = sprite.getSubimage(i * spriteSize, 0, spriteSize, spriteSize);
+
+            index++;
         }
 
         return sprites;

@@ -43,6 +43,10 @@ public class LevelManager implements RenderListener, UpdateListener {
 
     }
 
+    public int[][] getCurrentLevelData() {
+        return levels[currentLevelIndex].getData();
+    }
+
     private void initLevels() {
         levels = new Level[]{
                 new Level(

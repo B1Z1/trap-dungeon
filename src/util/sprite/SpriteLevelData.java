@@ -7,7 +7,7 @@ import java.awt.image.BufferedImage;
 
 public class SpriteLevelData {
     public static int[][] getLevelDataFromImage(String path, int levelWidth, int levelHeight) {
-        int[][] levelData = new int[levelWidth][levelHeight];
+        int[][] levelData = new int[levelHeight][levelWidth];
         BufferedImage image = LoaderImage.loadImage(path);
 
         for (int y = 0; y < image.getHeight(); y++) {
@@ -15,7 +15,7 @@ public class SpriteLevelData {
                 Color color = new Color(image.getRGB(x, y));
                 int value = color.getRed();
 
-                levelData[x][y] = value;
+                levelData[y][x] = value;
             }
         }
 
