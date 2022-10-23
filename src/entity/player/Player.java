@@ -4,13 +4,12 @@ import entity.core.Entity;
 import util.direction.Direction;
 import util.size.Size;
 
-import java.awt.Color;
-import java.awt.Graphics;
+import java.awt.image.BufferedImage;
 import java.util.HashMap;
 
-public class Player extends Entity {
+public class Player extends Entity<PlayerAnimationType> {
     private final float moveSpeed = 1.5f * Size.TILES_DEFAULT_SCALE;
-    private final HashMap<Direction, Boolean> currentDirectionMap = new HashMap<Direction, Boolean>() {{
+    private final HashMap<Direction, Boolean> currentDirectionMap = new HashMap<>() {{
         put(Direction.RIGHT, false);
         put(Direction.LEFT, false);
     }};
@@ -19,11 +18,21 @@ public class Player extends Entity {
             float x,
             float y,
             int width,
-            int height
+            int height,
+            HashMap<PlayerAnimationType, BufferedImage[]> animationMap
     ) {
-        super(x, y, width, height);
+        super(
+                x,
+                y,
+                5 * Size.TILES_DEFAULT_SCALE,
+                4 * Size.TILES_DEFAULT_SCALE,
+                width,
+                height,
+                animationMap
+        );
 
-        initHitBox(x, y, width, height);
+        initHitBox((int) (20 * Size.TILES_DEFAULT_SCALE), (int) (28 * Size.TILES_DEFAULT_SCALE));
+        updateCurrentAnimationType(PlayerAnimationType.IDLE);
     }
 
     public void resetDirections() {
@@ -36,17 +45,10 @@ public class Player extends Entity {
     }
 
     @Override
-    public void render(Graphics graphics) {
-        int x = (int) hitBox.x;
-        int y = (int) hitBox.y;
-
-        graphics.setColor(Color.BLACK);
-        graphics.drawRect(x, y, width, height);
-    }
-
-    @Override
     public void update() {
+        super.update();
         updatePosition();
+        updateAnimationType();
     }
 
     private void updatePosition() {
@@ -63,7 +65,24 @@ public class Player extends Entity {
         updateX(xSpeed);
     }
 
+    private void updateAnimationType() {
+        if (isMoving()) {
+            updateCurrentAnimationType(PlayerAnimationType.RUN);
+        } else {
+            updateCurrentAnimationType(PlayerAnimationType.IDLE);
+        }
+    }
+
     private void updateX(int xSpeed) {
-        hitBox.x += xSpeed;
+        updateHorizontalPosition(getX() + xSpeed);
+    }
+
+    private boolean isMoving() {
+        return isCurrentDirectionActive(Direction.RIGHT)
+                || isCurrentDirectionActive(Direction.LEFT);
+    }
+
+    private boolean isCurrentDirectionActive(Direction direction) {
+        return currentDirectionMap.get(direction);
     }
 }

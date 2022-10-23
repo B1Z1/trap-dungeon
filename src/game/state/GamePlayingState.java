@@ -1,14 +1,19 @@
 package game.state;
 
 import entity.player.Player;
+import entity.player.PlayerAnimationType;
 import util.direction.Direction;
+import util.loader.image.LoaderImage;
 import util.size.Size;
+import util.sprite.SpriteAnimation;
 import util.state.State;
 
 import java.awt.Graphics;
 import java.awt.event.KeyEvent;
 import java.awt.event.MouseEvent;
 import java.awt.event.WindowEvent;
+import java.awt.image.BufferedImage;
+import java.util.HashMap;
 
 public class GamePlayingState extends State {
     private Player player;
@@ -94,11 +99,23 @@ public class GamePlayingState extends State {
     }
 
     private void initClasses() {
+        initPlayer();
+    }
+
+    private void initPlayer() {
+        BufferedImage idleAnimation = LoaderImage.loadImage("player/Dude_Monster_Idle_4.png");
+        BufferedImage runAnimation = LoaderImage.loadImage("player/Dude_Monster_Run_6.png");
+        HashMap<PlayerAnimationType, BufferedImage[]> animationTypeBufferedImageHashMap = new HashMap<>() {{
+            put(PlayerAnimationType.IDLE, SpriteAnimation.cutSprite(idleAnimation, Size.TILES_DEFAULT_SIZE, 4));
+            put(PlayerAnimationType.RUN, SpriteAnimation.cutSprite(runAnimation, Size.TILES_DEFAULT_SIZE, 6));
+        }};
+
         player = new Player(
                 200,
                 200,
                 (int) (32 * Size.TILES_DEFAULT_SCALE),
-                (int) (32 * Size.TILES_DEFAULT_SCALE)
+                (int) (32 * Size.TILES_DEFAULT_SCALE),
+                animationTypeBufferedImageHashMap
         );
     }
 }

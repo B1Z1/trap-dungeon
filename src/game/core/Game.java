@@ -20,10 +20,9 @@ public class Game implements Runnable {
     private final GameStateManager gameStateManager;
 
     public Game() {
-        gameStateManager = new GameStateManager();
-
         gamePanel = new GamePanel();
         gameWindow = new GameWindow(gamePanel);
+        gameStateManager = new GameStateManager();
 
         initGamePanel();
         initGameWindow();

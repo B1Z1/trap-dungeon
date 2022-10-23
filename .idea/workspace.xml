@@ -1,17 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f75eb59c-27be-4ef1-ba16-09735ac7c266" name="Changes" comment="Add player assets">
-      <change afterPath="$PROJECT_DIR$/src/entity/core/Entity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/entity/player/Player.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/game/listeners/GameWindowFocusListener.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/util/direction/Direction.java" afterDir="false" />
+    <list default="true" id="f75eb59c-27be-4ef1-ba16-09735ac7c266" name="Changes" comment="Add lost focus for game states">
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/entity/player/PlayerAnimationType.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/util/loader/image/LoaderImage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/util/sprite/SpriteAnimation.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/entity/core/Entity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/entity/core/Entity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/entity/player/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/entity/player/Player.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/game/core/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/game/core/Game.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/game/core/GameWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/game/core/GameWindow.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/game/state/GameMenuState.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/game/state/GameMenuState.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/game/state/GamePlayingState.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/game/state/GamePlayingState.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/util/state/State.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/util/state/State.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -84,7 +83,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1666522396215</updated>
-      <workItem from="1666522397513" duration="10912000" />
+      <workItem from="1666522397513" duration="16044000" />
     </task>
     <task id="LOCAL-00001" summary="Initialize project">
       <created>1666522546017</created>
@@ -114,7 +113,14 @@
       <option name="project" value="LOCAL" />
       <updated>1666534003500</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Add lost focus for game states">
+      <created>1666536293121</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1666536293121</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -136,6 +142,7 @@
     <MESSAGE value="Create Game window with fps/ups measure" />
     <MESSAGE value="Create Game states" />
     <MESSAGE value="Add player assets" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add player assets" />
+    <MESSAGE value="Add lost focus for game states" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add lost focus for game states" />
   </component>
 </project>
