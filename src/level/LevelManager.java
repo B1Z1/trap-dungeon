@@ -4,23 +4,25 @@ import util.listener.RenderListener;
 import util.listener.UpdateListener;
 import util.loader.image.LoaderImage;
 import util.size.Size;
+import util.sprite.SpriteLevelData;
 
 import java.awt.Graphics;
 import java.awt.image.BufferedImage;
 
 public class LevelManager implements RenderListener, UpdateListener {
+    private static int TILE_SIZE = 16;
+    private static int TILES_IN_WIDTH = 23;
+    private static int TILES_IN_HEIGHT = 14;
+
     private BufferedImage[] levelSprite;
 
     private Level[] levels;
 
     private int currentLevelIndex = 0;
 
-    public LevelManager(
-            Level[] levels
-    ) {
-        this.levels = levels;
-
-        loadSprites();
+    public LevelManager() {
+        initLevels();
+        loadLevelAssets();
     }
 
     @Override
@@ -41,16 +43,33 @@ public class LevelManager implements RenderListener, UpdateListener {
 
     }
 
-    private void loadSprites() {
+    private void initLevels() {
+        levels = new Level[]{
+                new Level(
+                        SpriteLevelData.getLevelDataFromImage(
+                                "map/first-level-data.png",
+                                Size.TILES_IN_WIDTH,
+                                Size.TILES_IN_HEIGHT
+                        )
+                )
+        };
+    }
+
+    private void loadLevelAssets() {
         BufferedImage image = LoaderImage.loadImage("map/assets.png");
 
         levelSprite = new BufferedImage[322];
 
-        for (int y = 0; y < 14; y++) {
-            for (int x = 0; x < 23; x++) {
-                int index = y * 23 + x;
+        for (int y = 0; y < LevelManager.TILES_IN_HEIGHT; y++) {
+            for (int x = 0; x < LevelManager.TILES_IN_WIDTH; x++) {
+                int index = y * LevelManager.TILES_IN_WIDTH + x;
 
-                levelSprite[index] = image.getSubimage(x * 16, y * 16, 16, 16);
+                levelSprite[index] = image.getSubimage(
+                        x * LevelManager.TILE_SIZE,
+                        y * LevelManager.TILE_SIZE,
+                        LevelManager.TILE_SIZE,
+                        LevelManager.TILE_SIZE
+                );
             }
         }
     }

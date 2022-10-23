@@ -1,58 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f75eb59c-27be-4ef1-ba16-09735ac7c266" name="Changes" comment="Create running animation">
-      <change afterPath="$PROJECT_DIR$/resources/map/assets.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/level/Level.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/level/LevelManager.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/util/sprite/SpriteLevelData.java" afterDir="false" />
+    <list default="true" id="f75eb59c-27be-4ef1-ba16-09735ac7c266" name="Changes" comment="Create level loader nad generate first level">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/map/Arrow_Double_Jump.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/map/Arrow_Double_Jump.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/map/Be_Spear.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/map/Be_Xich.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/map/Bomb.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/map/Brick.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/map/Brick1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/map/FallingPlatfrom.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/map/FallingPlatfrom.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/map/FallingRock.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/map/FallingRock.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/map/Fan.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/map/Fan.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/map/Fire.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/map/FireBox.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/map/FireBox.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/map/Introl_Trap.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/map/Introl_Trap2.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/map/Introl_Trap_1.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/map/Introl_trap3.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/map/Jumper.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/map/Jumper.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/map/Matxich.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/map/Matxich2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/map/Matxich3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/map/Moving Platfrom.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/map/Moving Platfrom_A.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/map/Moving Platfrom_C.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/map/Moving Platfrom_D.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/map/Moving Platfrom_G.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/map/Moving Platfrom_H.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/map/Shooter_Arrow_Trap.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/map/Shooter_Arrow_Trap.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/map/Spear.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/map/Spear.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/map/Spike.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/map/SpikeBall.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/map/Spike_B.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/map/Suriken.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/map/Suriken.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/map/Trap_Spike.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/map/Trap_Spike_Run.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/map/Trap_Spike_Run.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/map/Wood.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/entity/player/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/entity/player/Player.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/game/state/GamePlayingState.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/game/state/GamePlayingState.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/game/state/GameStateManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/game/state/GameStateManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/level/LevelManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/level/LevelManager.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -126,7 +79,7 @@
       <option name="presentableId" value="Default" />
       <updated>1666522396215</updated>
       <workItem from="1666522397513" duration="18026000" />
-      <workItem from="1666543473270" duration="2501000" />
+      <workItem from="1666543473270" duration="3780000" />
     </task>
     <task id="LOCAL-00001" summary="Initialize project">
       <created>1666522546017</created>
@@ -170,7 +123,14 @@
       <option name="project" value="LOCAL" />
       <updated>1666541506576</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Create level loader nad generate first level">
+      <created>1666546269968</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1666546269968</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -194,6 +154,7 @@
     <MESSAGE value="Add player assets" />
     <MESSAGE value="Add lost focus for game states" />
     <MESSAGE value="Create running animation" />
-    <option name="LAST_COMMIT_MESSAGE" value="Create running animation" />
+    <MESSAGE value="Create level loader nad generate first level" />
+    <option name="LAST_COMMIT_MESSAGE" value="Create level loader nad generate first level" />
   </component>
 </project>

@@ -7,7 +7,7 @@ import java.util.HashMap;
 public class GameStateManager {
     private final HashMap<GameStateType, State> statesMap = new HashMap<GameStateType, State>();
 
-    private GameStateType currentStateType = GameStateType.MENU;
+    private GameStateType currentStateType = GameStateType.PLAYING;
 
     public GameStateManager() {
         initStates();

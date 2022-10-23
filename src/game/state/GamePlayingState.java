@@ -2,13 +2,11 @@ package game.state;
 
 import entity.player.Player;
 import entity.player.PlayerAnimationType;
-import level.Level;
 import level.LevelManager;
 import util.direction.Direction;
 import util.loader.image.LoaderImage;
 import util.size.Size;
 import util.sprite.SpriteAnimation;
-import util.sprite.SpriteLevelData;
 import util.state.State;
 
 import java.awt.Graphics;
@@ -127,16 +125,6 @@ public class GamePlayingState extends State {
     }
 
     private void initLevelManager() {
-        Level[] levels = new Level[]{
-                new Level(
-                        SpriteLevelData.getLevelDataFromImage(
-                                "map/first-level-data.png",
-                                Size.TILES_IN_WIDTH,
-                                Size.TILES_IN_HEIGHT
-                        )
-                )
-        };
-
-        levelManager = new LevelManager(levels);
+        levelManager = new LevelManager();
     }
 }
