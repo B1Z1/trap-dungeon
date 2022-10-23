@@ -62,7 +62,7 @@ public class Player extends Entity<PlayerAnimationType> {
             xSpeed -= moveSpeed;
         }
 
-        updateX(xSpeed);
+        updateHorizontalPosition(getX() + xSpeed);
     }
 
     private void updateAnimationType() {
@@ -71,10 +71,6 @@ public class Player extends Entity<PlayerAnimationType> {
         } else {
             updateCurrentAnimationType(PlayerAnimationType.IDLE);
         }
-    }
-
-    private void updateX(int xSpeed) {
-        updateHorizontalPosition(getX() + xSpeed);
     }
 
     private boolean isMoving() {

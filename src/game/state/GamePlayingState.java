@@ -2,10 +2,13 @@ package game.state;
 
 import entity.player.Player;
 import entity.player.PlayerAnimationType;
+import level.Level;
+import level.LevelManager;
 import util.direction.Direction;
 import util.loader.image.LoaderImage;
 import util.size.Size;
 import util.sprite.SpriteAnimation;
+import util.sprite.SpriteLevelData;
 import util.state.State;
 
 import java.awt.Graphics;
@@ -17,6 +20,7 @@ import java.util.HashMap;
 
 public class GamePlayingState extends State {
     private Player player;
+    private LevelManager levelManager;
 
     public GamePlayingState() {
         initClasses();
@@ -25,10 +29,12 @@ public class GamePlayingState extends State {
     @Override
     public void update() {
         player.update();
+        levelManager.update();
     }
 
     @Override
     public void render(Graphics graphics) {
+        levelManager.render(graphics);
         player.render(graphics);
     }
 
@@ -100,6 +106,7 @@ public class GamePlayingState extends State {
 
     private void initClasses() {
         initPlayer();
+        initLevelManager();
     }
 
     private void initPlayer() {
@@ -117,5 +124,19 @@ public class GamePlayingState extends State {
                 (int) (32 * Size.TILES_DEFAULT_SCALE),
                 animationTypeBufferedImageHashMap
         );
+    }
+
+    private void initLevelManager() {
+        Level[] levels = new Level[]{
+                new Level(
+                        SpriteLevelData.getLevelDataFromImage(
+                                "map/first-level-data.png",
+                                Size.TILES_IN_WIDTH,
+                                Size.TILES_IN_HEIGHT
+                        )
+                )
+        };
+
+        levelManager = new LevelManager(levels);
     }
 }
