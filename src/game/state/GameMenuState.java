@@ -5,6 +5,7 @@ import util.state.State;
 import java.awt.Graphics;
 import java.awt.event.KeyEvent;
 import java.awt.event.MouseEvent;
+import java.awt.event.WindowEvent;
 
 public class GameMenuState extends State {
     @Override
@@ -64,6 +65,16 @@ public class GameMenuState extends State {
 
     @Override
     public void mouseMoved(MouseEvent e) {
+
+    }
+
+    @Override
+    public void windowGainedFocus(WindowEvent e) {
+
+    }
+
+    @Override
+    public void windowLostFocus(WindowEvent e) {
 
     }
 }

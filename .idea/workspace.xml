@@ -1,51 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f75eb59c-27be-4ef1-ba16-09735ac7c266" name="Changes" comment="Create Game states">
-      <change beforePath="$PROJECT_DIR$/resources/Arrow_Double_Jump.gif" beforeDir="false" afterPath="$PROJECT_DIR$/resources/map/Arrow_Double_Jump.gif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/Arrow_Double_Jump.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/map/Arrow_Double_Jump.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/Be_Spear.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/map/Be_Spear.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/Be_Xich.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/map/Be_Xich.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/Bomb.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/map/Bomb.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/Brick.gif" beforeDir="false" afterPath="$PROJECT_DIR$/resources/map/Brick.gif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/Brick1.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/map/Brick1.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/FallingPlatfrom.gif" beforeDir="false" afterPath="$PROJECT_DIR$/resources/map/FallingPlatfrom.gif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/FallingPlatfrom.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/map/FallingPlatfrom.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/FallingRock.gif" beforeDir="false" afterPath="$PROJECT_DIR$/resources/map/FallingRock.gif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/FallingRock.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/map/FallingRock.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/Fan.gif" beforeDir="false" afterPath="$PROJECT_DIR$/resources/map/Fan.gif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/Fan.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/map/Fan.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/Fire.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/map/Fire.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/FireBox.gif" beforeDir="false" afterPath="$PROJECT_DIR$/resources/map/FireBox.gif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/FireBox.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/map/FireBox.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/Introl_Trap.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/map/Introl_Trap.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/Introl_Trap2.gif" beforeDir="false" afterPath="$PROJECT_DIR$/resources/map/Introl_Trap2.gif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/Introl_Trap_1.gif" beforeDir="false" afterPath="$PROJECT_DIR$/resources/map/Introl_Trap_1.gif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/Introl_trap3.gif" beforeDir="false" afterPath="$PROJECT_DIR$/resources/map/Introl_trap3.gif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/Jumper.gif" beforeDir="false" afterPath="$PROJECT_DIR$/resources/map/Jumper.gif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/Jumper.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/map/Jumper.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/Matxich.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/map/Matxich.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/Matxich2.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/map/Matxich2.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/Matxich3.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/map/Matxich3.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/Moving Platfrom.gif" beforeDir="false" afterPath="$PROJECT_DIR$/resources/map/Moving Platfrom.gif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/Moving Platfrom_A.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/map/Moving Platfrom_A.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/Moving Platfrom_C.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/map/Moving Platfrom_C.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/Moving Platfrom_D.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/map/Moving Platfrom_D.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/Moving Platfrom_G.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/map/Moving Platfrom_G.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/Moving Platfrom_H.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/map/Moving Platfrom_H.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/Shooter_Arrow_Trap.gif" beforeDir="false" afterPath="$PROJECT_DIR$/resources/map/Shooter_Arrow_Trap.gif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/Shooter_Arrow_Trap.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/map/Shooter_Arrow_Trap.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/Spear.gif" beforeDir="false" afterPath="$PROJECT_DIR$/resources/map/Spear.gif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/Spear.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/map/Spear.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/Spike.gif" beforeDir="false" afterPath="$PROJECT_DIR$/resources/map/Spike.gif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/SpikeBall.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/map/SpikeBall.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/Spike_B.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/map/Spike_B.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/Suriken.gif" beforeDir="false" afterPath="$PROJECT_DIR$/resources/map/Suriken.gif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/Suriken.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/map/Suriken.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/Trap_Spike.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/map/Trap_Spike.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/Trap_Spike_Run.gif" beforeDir="false" afterPath="$PROJECT_DIR$/resources/map/Trap_Spike_Run.gif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/Trap_Spike_Run.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/map/Trap_Spike_Run.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/Wood.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/map/Wood.png" afterDir="false" />
+    <list default="true" id="f75eb59c-27be-4ef1-ba16-09735ac7c266" name="Changes" comment="Add player assets">
+      <change afterPath="$PROJECT_DIR$/src/entity/core/Entity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/entity/player/Player.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/game/listeners/GameWindowFocusListener.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/util/direction/Direction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/game/core/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/game/core/Game.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/game/core/GameWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/game/core/GameWindow.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/game/state/GameMenuState.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/game/state/GameMenuState.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/game/state/GamePlayingState.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/game/state/GamePlayingState.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/util/state/State.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/util/state/State.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,6 +23,7 @@
       <list>
         <option value="Interface" />
         <option value="TypeScript File" />
+        <option value="Enum" />
         <option value="Class" />
       </list>
     </option>
@@ -90,6 +57,7 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\projects\java\trap-dungeon\resources\player" />
       <recent name="D:\projects\java\trap-dungeon\resources\map" />
       <recent name="D:\projects\java\trap-dungeon\resources" />
     </key>
@@ -116,7 +84,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1666522396215</updated>
-      <workItem from="1666522397513" duration="8584000" />
+      <workItem from="1666522397513" duration="10912000" />
     </task>
     <task id="LOCAL-00001" summary="Initialize project">
       <created>1666522546017</created>
@@ -139,7 +107,14 @@
       <option name="project" value="LOCAL" />
       <updated>1666533686165</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Add player assets">
+      <created>1666534003500</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1666534003500</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -160,6 +135,7 @@
     <MESSAGE value="Initialize project" />
     <MESSAGE value="Create Game window with fps/ups measure" />
     <MESSAGE value="Create Game states" />
-    <option name="LAST_COMMIT_MESSAGE" value="Create Game states" />
+    <MESSAGE value="Add player assets" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add player assets" />
   </component>
 </project>

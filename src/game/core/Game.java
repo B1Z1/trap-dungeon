@@ -2,6 +2,7 @@ package game.core;
 
 import game.listeners.GameKeyListener;
 import game.listeners.GameMouseListener;
+import game.listeners.GameWindowFocusListener;
 import game.state.GameStateManager;
 
 import java.awt.Graphics;
@@ -18,22 +19,14 @@ public class Game implements Runnable {
 
     private final GameStateManager gameStateManager;
 
-    private final GameKeyListener gameKeyListener;
-    private final GameMouseListener gameMouseListener;
-
     public Game() {
         gameStateManager = new GameStateManager();
 
         gamePanel = new GamePanel();
         gameWindow = new GameWindow(gamePanel);
 
-        gameKeyListener = new GameKeyListener(gameStateManager);
-        gameMouseListener = new GameMouseListener(gameStateManager);
-
-        gamePanel.addRenderListener(this::render);
-        gamePanel.addKeyListener(gameKeyListener);
-        gamePanel.addMouseListener(gameMouseListener);
-        gamePanel.requestFocus();
+        initGamePanel();
+        initGameWindow();
     }
 
     @Override
@@ -79,6 +72,22 @@ public class Game implements Runnable {
                 updates = 0;
             }
         }
+    }
+
+    private void initGamePanel() {
+        GameKeyListener gameKeyListener = new GameKeyListener(gameStateManager);
+        GameMouseListener gameMouseListener = new GameMouseListener(gameStateManager);
+
+        gamePanel.addRenderListener(this::render);
+        gamePanel.addKeyListener(gameKeyListener);
+        gamePanel.addMouseListener(gameMouseListener);
+        gamePanel.requestFocus();
+    }
+
+    private void initGameWindow() {
+        GameWindowFocusListener gameWindowFocusListener = new GameWindowFocusListener(gameStateManager);
+
+        gameWindow.addWindowFocusListener(gameWindowFocusListener);
     }
 
     private void update() {
