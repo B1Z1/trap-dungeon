@@ -169,8 +169,8 @@ public class Player extends Entity<PlayerAnimationType> {
     }
 
     private boolean isMoving() {
-        return isCurrentDirectionActive(Direction.RIGHT)
-                || isCurrentDirectionActive(Direction.LEFT);
+        return !(isCurrentDirectionActive(Direction.RIGHT) && isCurrentDirectionActive(Direction.LEFT))
+                && (isCurrentDirectionActive(Direction.RIGHT) || isCurrentDirectionActive(Direction.LEFT));
     }
 
     private boolean isCurrentDirectionActive(Direction direction) {
