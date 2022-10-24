@@ -1,5 +1,6 @@
 package game.state;
 
+import assets.AssetsManager;
 import entity.player.Player;
 import entity.player.PlayerAnimationType;
 import level.LevelManager;
@@ -7,6 +8,7 @@ import util.direction.Direction;
 import util.loader.image.LoaderImage;
 import util.size.Size;
 import util.sprite.SpriteAnimation;
+import util.sprite.SpriteLevelData;
 import util.state.State;
 
 import java.awt.Graphics;
@@ -19,10 +21,10 @@ import java.util.HashMap;
 public class GamePlayingState extends State {
     private final int leftBorder = (int) (0.2 * Size.GAME_WIDTH);
     private final int rightBorder = (int) (0.8 * Size.GAME_WIDTH);
-
+    private final int[][] backgroundData;
+    private AssetsManager assetsManager;
     private Player player;
     private LevelManager levelManager;
-
     private int xLevelOffset;
     private int levelTilesWide;
     private int maxTilesOffset;
@@ -30,6 +32,8 @@ public class GamePlayingState extends State {
 
     public GamePlayingState() {
         initClasses();
+
+        backgroundData = SpriteLevelData.getLevelDataFromImage("map/background.png");
 
         levelTilesWide = levelManager.getCurrentLevelData()[0].length;
         maxTilesOffset = levelTilesWide - Size.VISIBLE_TILES_IN_WIDTH;
@@ -48,6 +52,7 @@ public class GamePlayingState extends State {
 
     @Override
     public void render(Graphics graphics) {
+        renderBackground(graphics);
         levelManager.render(graphics);
         player.render(graphics);
     }
@@ -121,6 +126,7 @@ public class GamePlayingState extends State {
     }
 
     private void initClasses() {
+        initAssetsManager();
         initLevelManager();
         initPlayer();
     }
@@ -146,8 +152,25 @@ public class GamePlayingState extends State {
         );
     }
 
+    private void initAssetsManager() {
+        assetsManager = new AssetsManager();
+    }
+
     private void initLevelManager() {
-        levelManager = new LevelManager();
+        levelManager = new LevelManager(assetsManager);
+    }
+
+    private void renderBackground(Graphics graphics) {
+        for (int j = 0; j < backgroundData.length; j++) {
+            for (int i = 0; i < backgroundData[0].length; i++) {
+                int backgroundSpriteIndex = backgroundData[j][i];
+                BufferedImage sprite = assetsManager.getSpriteByIndex(backgroundSpriteIndex);
+                int x = i * Size.TILES_SIZE - xLevelOffset;
+                int y = j * Size.TILES_SIZE;
+
+                graphics.drawImage(sprite, x, y, Size.TILES_SIZE, Size.TILES_SIZE, null);
+            }
+        }
     }
 
     private void updateXOffset() {
