@@ -44,7 +44,10 @@ public class Collision {
     }
 
     public static boolean isSolid(float x, float y, int[][] levelData) {
-        if ((x <= 0 || x >= Size.GAME_WIDTH) || (y <= 0 || y >= Size.GAME_HEIGHT)) {
+        int maxWidth = levelData[0].length * Size.TILES_SIZE;
+        int maxHeight = levelData.length * Size.TILES_SIZE;
+
+        if ((x <= 0 || x >= maxWidth) || (y <= 0 || y >= maxHeight)) {
             return true;
         }
 

@@ -10,12 +10,12 @@ import java.awt.image.BufferedImage;
 import java.util.HashMap;
 
 public abstract class Entity<T> implements RenderListener, UpdateListener {
-    private final float xOffset;
-    private final float yOffset;
+    private final float xTextureOffset, yTextureOffset;
     private final HashMap<T, BufferedImage[]> animationMap;
 
     private float x, y;
     private int width, height;
+    private int xOffset;
 
     private Rectangle2D.Float hitBox;
 
@@ -27,16 +27,16 @@ public abstract class Entity<T> implements RenderListener, UpdateListener {
     public Entity(
             float x,
             float y,
-            float xOffset,
-            float yOffset,
+            float xTextureOffset,
+            float yTextureOffset,
             int width,
             int height,
             HashMap<T, BufferedImage[]> animationMap
     ) {
         this.x = x;
         this.y = y;
-        this.xOffset = xOffset;
-        this.yOffset = yOffset;
+        this.xTextureOffset = xTextureOffset;
+        this.yTextureOffset = yTextureOffset;
         this.width = width;
         this.height = height;
         this.animationMap = animationMap;
@@ -56,10 +56,6 @@ public abstract class Entity<T> implements RenderListener, UpdateListener {
         }
     }
 
-    public T getCurrentAnimationType() {
-        return currentAnimationType;
-    }
-
     public void updateCurrentAnimationType(T currentAnimationType) {
         if (this.currentAnimationType == currentAnimationType) {
             return;
@@ -71,10 +67,6 @@ public abstract class Entity<T> implements RenderListener, UpdateListener {
 
     public BufferedImage getCurrentAnimationImage() {
         return animationMap.get(currentAnimationType)[animationIndex];
-    }
-
-    public int getCurrentAnimationIndex() {
-        return animationIndex;
     }
 
     public float getX() {
@@ -101,16 +93,12 @@ public abstract class Entity<T> implements RenderListener, UpdateListener {
         }
     }
 
-    public int getWidth() {
-        return width;
-    }
-
-    public int getHeight() {
-        return height;
-    }
-
     public Rectangle2D.Float getHitBox() {
         return hitBox;
+    }
+
+    public void setXOffset(int xOffset) {
+        this.xOffset = xOffset;
     }
 
     protected void initHitBox(int width, int height) {
@@ -119,8 +107,8 @@ public abstract class Entity<T> implements RenderListener, UpdateListener {
 
     private void renderImage(Graphics graphics) {
         BufferedImage image = getCurrentAnimationImage();
-        int xWithOffset = (int) (x - xOffset);
-        int yWithOffset = (int) (y - yOffset);
+        int xWithOffset = (int) (x - xTextureOffset - xOffset);
+        int yWithOffset = (int) (y - yTextureOffset);
 
         graphics.drawImage(image, xWithOffset, yWithOffset, width, height, null);
     }
@@ -128,7 +116,7 @@ public abstract class Entity<T> implements RenderListener, UpdateListener {
     private void renderHitBox(Graphics graphics) {
         graphics.setColor(Color.GREEN);
         graphics.drawRect(
-                (int) hitBox.getX(),
+                (int) hitBox.getX() - xOffset,
                 (int) hitBox.getY(),
                 (int) hitBox.getWidth(),
                 (int) hitBox.getHeight()

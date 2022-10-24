@@ -17,17 +17,33 @@ import java.awt.image.BufferedImage;
 import java.util.HashMap;
 
 public class GamePlayingState extends State {
+    private final int leftBorder = (int) (0.2 * Size.GAME_WIDTH);
+    private final int rightBorder = (int) (0.8 * Size.GAME_WIDTH);
+
     private Player player;
     private LevelManager levelManager;
 
+    private int xLevelOffset;
+    private int levelTilesWide;
+    private int maxTilesOffset;
+    private int maxLevelOffsetX;
+
     public GamePlayingState() {
         initClasses();
+
+        levelTilesWide = levelManager.getCurrentLevelData()[0].length;
+        maxTilesOffset = levelTilesWide - Size.VISIBLE_TILES_IN_WIDTH;
+        maxLevelOffsetX = maxTilesOffset * Size.TILES_SIZE;
     }
 
     @Override
     public void update() {
         player.update();
         levelManager.update();
+
+        updateXOffset();
+        player.setXOffset(xLevelOffset);
+        levelManager.setXOffset(xLevelOffset);
     }
 
     @Override
@@ -132,5 +148,22 @@ public class GamePlayingState extends State {
 
     private void initLevelManager() {
         levelManager = new LevelManager();
+    }
+
+    private void updateXOffset() {
+        int playerX = (int) player.getX();
+        int diff = playerX - xLevelOffset;
+
+        if (diff > rightBorder) {
+            xLevelOffset += diff - rightBorder;
+        } else if (diff < leftBorder) {
+            xLevelOffset += diff - leftBorder;
+        }
+
+        if (xLevelOffset > maxLevelOffsetX) {
+            xLevelOffset = maxLevelOffsetX;
+        } else if (xLevelOffset < 0) {
+            xLevelOffset = 0;
+        }
     }
 }

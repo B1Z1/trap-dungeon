@@ -20,6 +20,8 @@ public class LevelManager implements RenderListener, UpdateListener {
 
     private int currentLevelIndex = 0;
 
+    private int xOffset = 0;
+
     public LevelManager() {
         initLevels();
         loadLevelAssets();
@@ -27,10 +29,13 @@ public class LevelManager implements RenderListener, UpdateListener {
 
     @Override
     public void render(Graphics graphics) {
-        for (int j = 0; j < Size.TILES_IN_HEIGHT; j++) {
-            for (int i = 0; i < Size.TILES_IN_WIDTH; i++) {
-                int index = levels[currentLevelIndex].getSpriteIndex(i, j);
-                int x = Size.TILES_SIZE * i;
+        Level currentLevel = levels[currentLevelIndex];
+        int currentLevelWidth = currentLevel.getData()[0].length;
+
+        for (int j = 0; j < Size.VISIBLE_TILES_IN_HEIGHT; j++) {
+            for (int i = 0; i < currentLevelWidth; i++) {
+                int index = currentLevel.getSpriteIndex(i, j);
+                int x = Size.TILES_SIZE * i - xOffset;
                 int y = Size.TILES_SIZE * j;
 
                 graphics.drawImage(levelSprite[index], x, y, Size.TILES_SIZE, Size.TILES_SIZE, null);
@@ -47,14 +52,14 @@ public class LevelManager implements RenderListener, UpdateListener {
         return levels[currentLevelIndex].getData();
     }
 
+    public void setXOffset(int xOffset) {
+        this.xOffset = xOffset;
+    }
+
     private void initLevels() {
         levels = new Level[]{
                 new Level(
-                        SpriteLevelData.getLevelDataFromImage(
-                                "map/first-level-data.png",
-                                Size.TILES_IN_WIDTH,
-                                Size.TILES_IN_HEIGHT
-                        )
+                        SpriteLevelData.getLevelDataFromImage("map/first-level-data.png")
                 )
         };
     }
