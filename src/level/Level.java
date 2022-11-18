@@ -1,7 +1,7 @@
 package level;
 
 public class Level {
-    private int[][] data;
+    private final int[][] data;
 
     public Level(
             int[][] data

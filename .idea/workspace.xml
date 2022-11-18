@@ -1,13 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f75eb59c-27be-4ef1-ba16-09735ac7c266" name="Changes" comment="Fix user move function">
-      <change afterPath="$PROJECT_DIR$/resources/map/background.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/AssetsManager.java" afterDir="false" />
+    <list default="true" id="f75eb59c-27be-4ef1-ba16-09735ac7c266" name="Changes" comment="Add background to level">
+      <change afterPath="$PROJECT_DIR$/src/entity/spike/Spike.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/entity/spike/SpikeAnimationType.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/map/first-level-data.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/map/first-level-data.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/game/state/GamePlayingState.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/game/state/GamePlayingState.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/level/LevelManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/level/LevelManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/level/Level.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/level/Level.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -19,8 +17,8 @@
       <list>
         <option value="Interface" />
         <option value="TypeScript File" />
-        <option value="Enum" />
         <option value="Class" />
+        <option value="Enum" />
       </list>
     </option>
   </component>
@@ -86,7 +84,7 @@
       <updated>1666522396215</updated>
       <workItem from="1666522397513" duration="18026000" />
       <workItem from="1666543473270" duration="8945000" />
-      <workItem from="1666633604374" duration="7534000" />
+      <workItem from="1666633604374" duration="8532000" />
     </task>
     <task id="LOCAL-00001" summary="Initialize project">
       <created>1666522546017</created>
@@ -165,7 +163,14 @@
       <option name="project" value="LOCAL" />
       <updated>1666638859384</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Add background to level">
+      <created>1666642372164</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1666642372164</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -194,6 +199,7 @@
     <MESSAGE value="Create collision detection for game" />
     <MESSAGE value="Create movable level" />
     <MESSAGE value="Fix user move function" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fix user move function" />
+    <MESSAGE value="Add background to level" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add background to level" />
   </component>
 </project>
