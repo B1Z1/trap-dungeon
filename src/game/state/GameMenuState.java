@@ -9,8 +9,6 @@ import java.awt.event.WindowEvent;
 
 /**
  * Stan menu.
- *
- * @TODO Potrzebna implementacja
  */
 public class GameMenuState extends State {
     @Override
