@@ -7,6 +7,11 @@ import java.awt.event.KeyEvent;
 import java.awt.event.MouseEvent;
 import java.awt.event.WindowEvent;
 
+/**
+ * Stan menu.
+ *
+ * @TODO Potrzebna implementacja
+ */
 public class GameMenuState extends State {
     @Override
     public void update() {

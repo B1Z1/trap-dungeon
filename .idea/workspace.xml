@@ -1,11 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f75eb59c-27be-4ef1-ba16-09735ac7c266" name="Changes" comment="Add background to level">
-      <change afterPath="$PROJECT_DIR$/src/entity/spike/Spike.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/entity/spike/SpikeAnimationType.java" afterDir="false" />
+    <list default="true" id="f75eb59c-27be-4ef1-ba16-09735ac7c266" name="Changes" comment="Create spike classes">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/level/Level.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/level/Level.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/game/core/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/game/core/Game.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/game/state/GameMenuState.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/game/state/GameMenuState.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/game/state/GamePlayingState.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/game/state/GamePlayingState.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/game/state/GameStateManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/game/state/GameStateManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/util/collision/Collision.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/util/collision/Collision.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/util/size/Size.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/util/size/Size.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,6 +50,7 @@
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
     "last_opened_file_path": "D:/projects/java/trap-dungeon/resources/map",
+    "nodejs_package_manager_path": "npm",
     "ts.external.directory.path": "D:\\jetbrains\\apps\\IDEA-U\\ch-0\\222.4345.14\\plugins\\JavaScriptLanguage\\jsLanguageServicesImpl\\external"
   }
 }]]></component>
@@ -85,6 +89,7 @@
       <workItem from="1666522397513" duration="18026000" />
       <workItem from="1666543473270" duration="8945000" />
       <workItem from="1666633604374" duration="8532000" />
+      <workItem from="1668785971434" duration="838000" />
     </task>
     <task id="LOCAL-00001" summary="Initialize project">
       <created>1666522546017</created>
@@ -170,7 +175,14 @@
       <option name="project" value="LOCAL" />
       <updated>1666642372164</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Create spike classes">
+      <created>1668786224010</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1668786224010</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -200,6 +212,7 @@
     <MESSAGE value="Create movable level" />
     <MESSAGE value="Fix user move function" />
     <MESSAGE value="Add background to level" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add background to level" />
+    <MESSAGE value="Create spike classes" />
+    <option name="LAST_COMMIT_MESSAGE" value="Create spike classes" />
   </component>
 </project>

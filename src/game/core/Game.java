@@ -28,6 +28,11 @@ public class Game implements Runnable {
         initGameWindow();
     }
 
+    /**
+     * Funkcja odpowiedzialna za render oraz update aplikacji
+     * Domyślnie ustawione jest 120 klatek na sekunde oraz 100 aktualizacji na sekunde.
+     * Można to zmienić w zmiennych FPS_SET oraz UPS_SET
+     */
     @Override
     public void run() {
         double nanoTimePerFrame = NANO_SECOND / FPS_SET;

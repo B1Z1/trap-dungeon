@@ -4,6 +4,10 @@ import util.size.Size;
 
 import java.awt.geom.Rectangle2D;
 
+/**
+ * Zestaw funkcji utilowych pozwalających wyznaczać czy obiekt koliduje
+ * się z innymi w zależności od podanych danych
+ */
 public class Collision {
     public static boolean canMove(float x, float y, float width, float height, int[][] levelData) {
         return !isSolid(x, y, levelData)

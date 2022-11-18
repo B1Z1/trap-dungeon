@@ -2,6 +2,9 @@ package util.sprite;
 
 import java.awt.image.BufferedImage;
 
+/**
+ * Zestaw funkcji pozwalające pociąć sprite na kilka
+ */
 public class SpriteAnimation {
     public static BufferedImage[] cutSprite(
             BufferedImage sprite,

@@ -5,6 +5,9 @@ import util.loader.image.LoaderImage;
 import java.awt.Color;
 import java.awt.image.BufferedImage;
 
+/**
+ * Mechanizm pozwalający wyciągnąć dane z obrazku mapy na podstawie kolorów w obrazku
+ */
 public class SpriteLevelData {
     public static int[][] getLevelDataFromImage(String path) {
         BufferedImage image = LoaderImage.loadImage(path);

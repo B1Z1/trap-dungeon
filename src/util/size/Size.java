@@ -1,5 +1,8 @@
 package util.size;
 
+/**
+ * Zestaw parametrów globalnych
+ */
 public class Size {
     public final static int VISIBLE_TILES_IN_WIDTH = 26;
     public final static int VISIBLE_TILES_IN_HEIGHT = 14;

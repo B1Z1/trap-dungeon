@@ -4,6 +4,10 @@ import util.state.State;
 
 import java.util.HashMap;
 
+/**
+ * Klasa odpowiedzialna za stan gry. Tutaj znajduje się
+ * logika przełączaniem się pomiędzy rzeczywistą grą a innymi oknami
+ */
 public class GameStateManager {
     private final HashMap<GameStateType, State> statesMap = new HashMap<GameStateType, State>();
 

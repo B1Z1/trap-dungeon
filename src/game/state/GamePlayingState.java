@@ -18,6 +18,9 @@ import java.awt.event.WindowEvent;
 import java.awt.image.BufferedImage;
 import java.util.HashMap;
 
+/**
+ * State gry. W niej znajduje się nasłuchiwanie na różne eventy oraz inicjalizacja wszystkich obiektów do grania
+ */
 public class GamePlayingState extends State {
     private final int leftBorder = (int) (0.2 * Size.GAME_WIDTH);
     private final int rightBorder = (int) (0.8 * Size.GAME_WIDTH);
